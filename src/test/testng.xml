@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" parallel="tests">
+
+    <test name="checkProf">
+        <parameter name="firstParam" value="Иван Васильевич меняет профессию"></parameter>
+        <parameter name="secondParam" value="На какую?"></parameter>
+
+        <classes>
+            <class name="homeWork.thirdLesson.starTest"></class>
+        </classes>
+
+    </test>
+
+    <test name="checkUrl">
+        <parameter name="firstParam" value="https://www.google.com/"></parameter>
+        <parameter name="secondParam" value="Автотесты это круто!)"></parameter>
+
+        <classes>
+            <class name="homeWork.thirdLesson.starTest"></class>
+        </classes>
+
+    </test>
+
+</suite>
