@@ -7,7 +7,7 @@
         <parameter name="secondParam" value="На какую?"></parameter>
 
         <classes>
-            <class name="homeWork.thirdLesson.starTest"></class>
+            <class name="homeWork.thirdLesson.StarTest"></class>
         </classes>
 
     </test>
@@ -17,7 +17,15 @@
         <parameter name="secondParam" value="Автотесты это круто!)"></parameter>
 
         <classes>
-            <class name="homeWork.thirdLesson.starTest"></class>
+            <class name="homeWork.thirdLesson.StarTest"></class>
+        </classes>
+
+    </test>
+
+    <test name="startForms">
+
+        <classes>
+            <class name="homeWork.pageObject.StartTest"></class>
         </classes>
 
     </test>

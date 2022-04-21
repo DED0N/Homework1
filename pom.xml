@@ -17,7 +17,14 @@
 
         <fork.Count>1</fork.Count>
 
+        <someModule.Includes>seleniumTests.SelParamTest</someModule.Includes>
+
         <suiteXmlFile>src\test\testng.xml</suiteXmlFile>
+
+        <stand.key>stand2</stand.key>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -35,6 +42,14 @@
             <artifactId>unirest-java</artifactId>
             <version>1.4.9</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -58,11 +73,41 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.13.9</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
 
     </dependencies>
 
 
     <build>
+
         <plugins>
 
             <plugin>
@@ -70,9 +115,13 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <suiteXmlFiles>
-                      <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                    </suiteXmlFiles>
+                    <!--                    <suiteXmlFiles>
+                                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                                        </suiteXmlFiles>-->
+
+                    <includes>
+                        <include>${someModule.Includes}</include>
+                    </includes>
 
 
                     <forkCount>${fork.Count}</forkCount>
@@ -91,8 +140,8 @@
                         </property>
 
                         <property>
-                            <name>ServerPort</name>
-                            <value>${server.port}</value>
+                            <name>standKey</name>
+                            <value>${stand.key}</value>
                         </property>
 
                     </systemProperties>
