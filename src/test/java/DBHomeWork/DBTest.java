@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class DBTest {
     @Test
-    public void startTest(){
+    public void startTest() {
 
         String getFromBD = "SELECT * FROM REGISTRATION";
 

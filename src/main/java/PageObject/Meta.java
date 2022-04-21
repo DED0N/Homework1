@@ -1,17 +1,13 @@
 package PageObject;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Calendar;
-import java.util.List;
 
 public class Meta {
 
@@ -58,11 +54,11 @@ public class Meta {
         element.sendKeys(filePath);
     }
 
-    public void submitChoice(final WebElement element){
+    public void submitChoice(final WebElement element) {
         element.submit();
     }
 
-    public void pressEnter(final WebElement element){
+    public void pressEnter(final WebElement element) {
         element.sendKeys(Keys.ENTER);
     }
 

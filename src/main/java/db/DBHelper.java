@@ -146,6 +146,7 @@ public class DBHelper {
 
     /**
      * Проверка существования юзера
+     *
      * @param id
      * @return
      */

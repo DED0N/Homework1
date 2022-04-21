@@ -29,7 +29,7 @@ public class ListsAndArrays {
         list.stream().filter(s -> s.contains("П")).forEach(s -> System.out.println("Filter method contains: " + s));
 
         ArrayList<String> secondList = (ArrayList<String>)
-        list.stream().filter(s -> s.length() >= 15).collect(Collectors.toList());
+                list.stream().filter(s -> s.length() >= 15).collect(Collectors.toList());
         secondList.forEach(s -> System.out.println("Second list items: " + s));
 
         int[] array = new int[5];

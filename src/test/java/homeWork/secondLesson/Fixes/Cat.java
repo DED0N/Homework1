@@ -1,12 +1,12 @@
 package homeWork.secondLesson.Fixes;
 
-public class Cat extends BaseFarm implements AnimalColor{
+public class Cat extends BaseFarm implements AnimalColor {
 
     public Cat() {
 
     }
 
-    public Cat(String setName){
+    public Cat(String setName) {
         super(setName);
     }
 

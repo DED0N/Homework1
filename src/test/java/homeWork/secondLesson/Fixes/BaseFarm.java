@@ -25,7 +25,7 @@ public class BaseFarm {
         return setVoice;
     }
 
-    public void setAge(final String setAge){
+    public void setAge(final String setAge) {
         this.age = setAge;
     }
 

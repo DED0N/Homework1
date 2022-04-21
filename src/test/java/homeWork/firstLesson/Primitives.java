@@ -28,8 +28,8 @@ public class Primitives {
         result = a <= b;
         System.out.println("a <= b :" + result);
 
-        String morning1 ="доброе";
-        String morning2 ="не доброе, потому что сегодня понедельник";
+        String morning1 = "доброе";
+        String morning2 = "не доброе, потому что сегодня понедельник";
 
         System.out.println("Сегодня утро " + morning1);
         System.out.println("Сегодня утро " + morning2);
@@ -71,18 +71,15 @@ public class Primitives {
         return x;
     }
 
-    public static int checkParity(int a, int b){
+    public static int checkParity(int a, int b) {
         int x = a % b;
-        if(a % b == 0 ){
+        if (a % b == 0) {
             System.out.println("Число четное");
-        }else {
+        } else {
             System.out.println("Число нечетное");
         }
         return x;
     }
-
-
-
 
 
 }

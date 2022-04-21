@@ -5,12 +5,12 @@ import java.util.Properties;
 
 public class PropertyLoader {
 
-    public static String loadProperty(final String key){
+    public static String loadProperty(final String key) {
         Properties prop = getAllPropFromFile("project.properties");
         return prop.getProperty(key);
     }
 
-    public static String loadProperty(final String key, String path){
+    public static String loadProperty(final String key, String path) {
         Properties prop = getAllPropFromFile(path);
         return prop.getProperty(key);
     }

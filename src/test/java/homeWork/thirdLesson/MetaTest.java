@@ -14,12 +14,12 @@ public class MetaTest {
     String filePath;
     String curDir = System.getProperty("user.dir");
 
-@BeforeTest
-public void beforeTest() {
-    System.out.println("Действия после начала теста");
-}
+    @BeforeTest
+    public void beforeTest() {
+        System.out.println("Действия после начала теста");
+    }
 
-@BeforeMethod
+    @BeforeMethod
     public String getOS(String getOSCheck) {
         if (System.getProperty("os.name").contains("Windows")) {
             System.out.println("Запуск теста на Windows");
@@ -30,8 +30,6 @@ public void beforeTest() {
         }
         return getOSCheck;
     }
-
-
 
 
     public static ArrayList<String> getProf(String prof) {
