@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Forms extends Meta {
+    /**
+     * Методы и локаторы для страницы "Forms"
+     */
     @FindBy(xpath = ".//span[contains(., 'Practice Form')]")
     private WebElement practiceForm;
 
@@ -45,14 +48,13 @@ public class Forms extends Meta {
     @FindBy(xpath = ".//input[@id='react-select-3-input']")
     private WebElement stateText;
 
-
     @FindBy(xpath = ".//div[@id='city']")
     private WebElement city;
 
     @FindBy(xpath = ".//input[@id='react-select-4-input']")
     private WebElement cityText;
 
-    @FindBy(xpath =   ".//button[@id='submit']")
+    @FindBy(xpath = ".//button[@id='submit']")
     private WebElement submitButton;
 
     @FindBy(xpath = ".//button[@id='closeLargeModal']")
@@ -62,59 +64,55 @@ public class Forms extends Meta {
         super(driver);
     }
 
-
-    public void clickForms(){
+    public void clickForms() {
         click(practiceForm);
     }
 
-   public void setFilData(String textFullName, String textLastName, String textEmail, String textMobile, String currentAddres){
-
+    public void setFilData(String textFullName, String textLastName, String textEmail, String textMobile, String currentAddres) {
         setText(fullName, textFullName);
         setText(lastName, textLastName);
         setText(email, textEmail);
         setText(mobile, textMobile);
         setText(currentAddress, currentAddres);
-
     }
-    public void setFilData(String text){
+
+    public void setFilData(String text) {
         setText(fullName, text);
         setText(lastName, text);
         setText(email, text);
     }
 
-    public void setDatePicker(){
+    public void setDatePicker() {
         click(dateOfBirth);
         click(getDateOfBirth);
     }
 
-
-    public void setGender(){
+    public void setGender() {
         click(genderButton);
     }
 
-    public void setHobbies(){
+    public void setHobbies() {
         click(hobbies);
     }
 
-    public void setPhoto(String filePath){
+    public void setPhoto(String filePath) {
         loadFile(photo, filePath);
     }
 
-    public void setStateAndCity(String setState, String setCity){
+    public void setStateAndCity(String setState, String setCity) {
         click(state);
         setText(stateText, setState);
         pressEnter(stateText);
-
         click(city);
         setText(cityText, setCity);
         pressEnter(cityText);
     }
 
-    public void setEnter(){
+    public void setEnter() {
 
     }
 
-    public void setSubmitAndClose(){
+    public void setSubmitAndClose() {
         submitChoice(submitButton);
         click(closeModalWindowsButton);
     }

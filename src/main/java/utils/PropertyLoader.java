@@ -5,17 +5,32 @@ import java.util.Properties;
 
 public class PropertyLoader {
 
+    /**
+     * Метод получения параметров из фалйа
+     * @param key
+     * @return
+     */
     public static String loadProperty(final String key) {
         Properties prop = getAllPropFromFile("project.properties");
         return prop.getProperty(key);
     }
 
+    /**
+     * Метод получения параметров из файла + путь
+     * @param key
+     * @param path
+     * @return
+     */
     public static String loadProperty(final String key, String path) {
         Properties prop = getAllPropFromFile(path);
         return prop.getProperty(key);
     }
 
-
+    /**
+     * Метод чтения информации, находящейся в файле
+     * @param path
+     * @return
+     */
     public static Properties getAllPropFromFile(final String path) {
 
         Properties prop = new Properties();

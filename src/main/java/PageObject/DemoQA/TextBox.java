@@ -11,6 +11,10 @@ public class TextBox extends Meta {
         super(driver);
     }
 
+    /**
+     * Методы и локаторы для страницы TextBox
+     */
+
     @FindBy(xpath = ".//span[contains(., 'Text Box')]")
     private WebElement textBox;
 

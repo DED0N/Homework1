@@ -12,5 +12,17 @@ public class Cycles {
         }
     }
 
+    public static void startWhile() {
 
+        int number = 3;
+        int result = 1;
+        int power = 1;
+        while (power <= 10) {
+            result = result * number;
+            System.out.println(number + " в степени " + power + " = " + result);
+            power++;
+        }
+    }
 }
+
+

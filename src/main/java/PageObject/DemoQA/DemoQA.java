@@ -6,6 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class DemoQA extends Meta {
+    /**
+     * Методы и локаторы для главной страницы сайта
+     */
+
     @FindBy(xpath = ".//h5[contains(., 'Elements')]")
     private WebElement elements;
 
@@ -28,27 +32,27 @@ public class DemoQA extends Meta {
         super(driver);
     }
 
-    public void clickElements(){
+    public void clickElements() {
         click(elements);
     }
 
-    public void clickForms(){
+    public void clickForms() {
         click(Forms);
     }
 
-    public void clickAlerts(){
+    public void clickAlerts() {
         click(elements);
     }
 
-    public void clickWidgets(){
+    public void clickWidgets() {
         click(elements);
     }
 
-    public void clickInteractions(){
+    public void clickInteractions() {
         click(elements);
     }
 
-    public void setHome(){
+    public void setHome() {
         click(home);
     }
 

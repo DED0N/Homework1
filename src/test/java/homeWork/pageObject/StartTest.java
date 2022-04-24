@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 
 public class StartTest extends BaseTest {
 
-
+    /**
+     * Проверка существования элемента на странице
+     */
     @Test(suiteName = "DemoQAHome")
-
-
     public void startDemoQA() {
         DemoQA demoQA = new DemoQA(getDriver());
 
@@ -30,7 +30,9 @@ public class StartTest extends BaseTest {
         takeScreenshot("startDemoQA");
     }
 
-
+    /**
+     * Проверка заполнения форм на странице "Text box"
+     */
     @Test(testName = "textBoxTest")
     public void startTextBox() {
         getDriver().get(standURL);
@@ -58,8 +60,10 @@ public class StartTest extends BaseTest {
 
     }
 
-
-    @Test()
+    /**
+     * Проверка заполнения форм на странице "Forms"
+     */
+    @Test(testName = "startForms")
     public void startForms() {
         getDriver().get(standURL);
         getDriver().manage().window().maximize();

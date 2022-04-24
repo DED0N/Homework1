@@ -12,6 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import io.qameta.allure.Attachment;
 import utils.PropertyLoader;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -19,7 +20,6 @@ import java.io.IOException;
 public class BaseTest {
 
     WebDriver driver;
-
     Assert anAssert;
     String testName;
 
@@ -27,7 +27,9 @@ public class BaseTest {
     public String standKey = System.getProperty("standKey");
     public String standURL = PropertyLoader.loadProperty(standKey);
 
-
+    /**
+     * Действия перед началом теста. Объявление локального драйвера хром.
+     */
     @BeforeTest
     public void beforeTest() {
         System.setProperty("web-driver.chrome.driver", "/src/main/resources/chromedriver.exe");
@@ -37,10 +39,23 @@ public class BaseTest {
         driver = new ChromeDriver();
         System.out.println("Старт теста");
 
+        //Подключение к селеноид и компиляция проекта на Дженкинс, в браузере FireFox.
+        //Закоммитил, так как паралелльно работал с файлом и не всегда было удобно запускать докер и дженкинс для проверки :)
 
+        // driver = new FirefoxDriver();
+        /*firefoxOptions.setCapability("version", "97.0");
+        URL hub = null;
+        try {
+            hub = new URL("http://localhost:4444/wd/hub");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        driver = new RemoteWebDriver(hub, firefoxOptions);*/
     }
 
-
+    /**
+     * Действия после тестов
+     */
     @AfterTest
     public void afterTest() {
         if (driver != null) {
@@ -49,17 +64,23 @@ public class BaseTest {
         System.out.println("Завершение теста");
     }
 
-
+    /**
+     * Получение драйвера
+     * @return
+     */
     public WebDriver getDriver() {
         return driver;
     }
 
+    /**
+     * Получение скриншота, после завершения прогона
+     * @return
+     */
     @Attachment(value = "Screenshot result", type = "image/png")
     public byte[] getScreenShots() {
 
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
-
 
     public void takeScreenshot(String testName) {
         File file = new File("./src/main/resources/" + testName + ".jpg");

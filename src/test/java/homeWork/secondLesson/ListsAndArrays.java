@@ -6,11 +6,14 @@ import java.util.stream.Collectors;
 
 public class ListsAndArrays {
     public static void main(String[] args) {
+
+        /**
+         * Создание списка значение и получение результатов, после выполнения цикла foreach
+         */
         ArrayList<String> list = new ArrayList<>();
         list.add("Первое значение");
         list.add("Второе значение");
         list.add("Третье значение");
-
 
         list.get(0);
 
@@ -47,6 +50,9 @@ public class ListsAndArrays {
             System.out.println(array[i]);
         }
 
+        /**
+         * Создание карты и получение результатов, после выполнения цикла foreach
+         */
         HashMap<String, Integer> hashMap = new HashMap<>();
         hashMap.put("Бургер", 300);
         hashMap.put("Наггетсы", 199);

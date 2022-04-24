@@ -13,6 +13,11 @@ public class StarTest extends MetaTest {
     String firstParam;
     String secondParam;
 
+    /**
+     * Задаем параметры для первого теста из testng
+     * @param firstParam
+     * @param secondParam
+     */
     @Parameters({"firstParam", "secondParam"})
     @Test(priority = 1)
     public void checkProf(String firstParam, String secondParam) {
@@ -24,6 +29,12 @@ public class StarTest extends MetaTest {
         }
 
     }
+
+    /**
+     * Задаем параметры для второго тест из testng
+     * @param firstParam
+     * @param secondParam
+     */
 
     @Parameters({"firstParam", "secondParam"})
     @Test(priority = 2)

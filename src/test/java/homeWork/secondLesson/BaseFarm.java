@@ -3,7 +3,6 @@ package homeWork.secondLesson;
 public class BaseFarm {
     public static void main(String[] args) {
 
-
         //Создаем собакена
         MetaAnimals dog = new MetaAnimals("Собака", "Черная", "Лай", "Жулька", "2 года");
         System.out.println(dog.getInfo() + " " + dog.getColor());

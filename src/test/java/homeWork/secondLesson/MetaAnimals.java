@@ -13,7 +13,6 @@ public class MetaAnimals {
 
     //Создаем конструктор
 
-
     MetaAnimals(String name, String color, String voice, String nickname, String age) {
         this.name = name;
         this.color = color;
@@ -27,7 +26,6 @@ public class MetaAnimals {
 
     MetaAnimals() {
     }
-
 
     public void setName(String name) {
         this.name = name;
@@ -69,7 +67,10 @@ public class MetaAnimals {
         return age;
     }
 
-    //Получаем всю информацию о животном
+    /**
+     * Получение информации о животном
+     * @return
+     */
 
     public ArrayList<String> getInfo() {
         ArrayList<String> animalInfo = new ArrayList<>(Arrays.asList(
@@ -79,7 +80,6 @@ public class MetaAnimals {
                 "Кличка: " + nickname,
                 "Возраст: " + age)
         );
-
         return animalInfo;
     }
 
